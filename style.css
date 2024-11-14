@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --gradient: linear-gradient(to right bottom, #aed4e6, #1ac8ed);
+  --border-4px: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  /* tab-potrait */
+  @media (max-width: 56.25em) {
+    font-size: 56.25%;
+  }
+
+  /* phone
+  @media (max-width: 37.5em) {
+    font-size: 43.75%;
+  } */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-image: var(--gradient);
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 40rem;
+  background: rgba(255, 255, 255);
+  border-radius: 10px;
+  padding: 2rem;
+
+  @media (max-width: 37.5em) {
+    max-width: 35rem;
+  }
+}
+
+.qr {
+  min-height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 2s linear infinite;
+}
+
+.qr__img {
+  display: block;
+  width: 25rem;
+  height: 25rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  position: relative;
+  align-self: self-start;
+}
+
+.form__label::after {
+  content: '';
+  position: absolute;
+  right: -2.5rem;
+  width: 2rem;
+  height: 2rem;
+
+  background-image: url(SVG/link.svg);
+  background-size: cover;
+}
+
+.form__input {
+  border: none;
+  border-radius: var(--border-4px);
+  outline: none;
+  padding: 0.7rem 0.5rem;
+  background-color: #eee;
+  font-size: 1.4rem;
+}
+
+.form__btn {
+  border: none;
+  outline: none;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 1rem;
+  background-color: #1ac8ed;
+}
+
+/* animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* utilities */
+.u-center {
+  text-align: center;
+}
+
+.u-mb-6 {
+  margin-bottom: 0.6rem;
+}
+
+.u-mb-20 {
+  margin-bottom: 2rem;
+}
+
+.u-mb-30 {
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="SVG/qr_code_scanner.svg"
+      type="image/x-icon"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="u-center u-mb-20">
+        <h1 class="heading">QR Code Converter</h1>
+      </div>
+
+      <div class="qr u-mb-20">
+        <!-- <svg class="spinner">
+          <use xlink:href="symbol-defs.svg#icon-spinner"></use>
+        </svg> -->
+        <!-- <img
+          src="http://api.qrserver.com/v1/create-qr-code/?data=https://fonts.google.com/selection/embed&size=250x250"
+          alt="QR-Code"
+          class="qr__img"
+        /> -->
+      </div>
+
+      <form class="form">
+        <label for="link" class="form__label u-mb-6">Enter url</label>
+        <input
+          type="url"
+          class="form__input u-mb-30"
+          id="link"
+          placeholder="https://convert"
+        />
+        <button class="form__btn">Convert</button>
+      </form>
+    </div>
+  </body>
+</html>
